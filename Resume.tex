@@ -1,0 +1,176 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{paracol}
+\usepackage[fixed]{fontawesome5}
+\usepackage{xcolor}
+
+\setmainfont{Arial}
+
+\graphicspath{{./Resources/}}
+
+\setlength\parindent{0pt}
+
+\pagenumbering{gobble}
+
+\newcommand{\cvline}[1]{
+    \begin{tikzpicture}
+        \draw[line width=2pt,line cap= round] (0,0) -- (#1,0);
+    \end{tikzpicture}
+}
+
+\newcommand{\multilinecell}[1]{
+    \begin{tabular}{l}
+        #1
+    \end{tabular}
+}
+
+\newcommand{\cvsection}[2]{
+    \begin{tabular}{p{0.22\textwidth}p{0.5\textwidth}}
+        \multilinecell{
+            \cvline{0.05\textwidth}\\
+            #1
+        }
+    &
+        \multilinecell{
+            \cvline{0.7\textwidth}\\
+            #2
+        }
+    \end{tabular}
+}
+
+\newcommand{\cvhead}{
+    \begin{tabular}{p{0.22\textwidth}p{0.5\textwidth}}
+        \multilinecell{
+            \textbf{\huge{Yash}}\medskip\\
+            \textbf{\huge{Eksambekar}}\\
+            yasheksambekar@gmail.com
+        }
+    &
+        \multilinecell{
+            \cvline{0.7\textwidth}\medskip\\
+            \begin{tabular}{ll}
+            	\begin{tabular}{ll}
+            		\raisebox{-.25\height}{\includegraphics[height=14pt]{github}} & \href{https://github.com/samba9274}{\texttt{github.com/samba9274}}
+            	\end{tabular}
+            	&
+            	\begin{tabular}{ll}
+            		\raisebox{-.25\height}{\includegraphics[width=14pt]{hackerrank}} & \href{https://www.hackerrank.com/samba9274}{\texttt{hackerrank.com/samba9274}}
+            	\end{tabular}\\\\
+            	\begin{tabular}{ll}
+            		\raisebox{-.25\height}{\includegraphics[height=14pt]{linkedin}} & \href{https://linkedin.com/in/yash-eksambekar}{\texttt{linkedin.com/in/yash-eksambekar}}
+            	\end{tabular}
+            	&
+            	\begin{tabular}{ll}
+            		\raisebox{-.25\height}{\includegraphics[width=14pt]{codechef}} & \href{https://codechef.com/users/samba9274}{\texttt{codechef.com/users/samba9274}}
+            	\end{tabular}\\\\
+            	\begin{tabular}{ll}
+            		\raisebox{-.25\height}{\includegraphics[height=14pt]{link}} & \href{https://yash-eksambekar.web.app}{\texttt{yash-eksambekar.web.app}}
+            	\end{tabular}
+            	&
+            	\begin{tabular}{ll}
+            		\raisebox{-.25\height}{\includegraphics[width=14pt]{leetcode}} & \href{https://leetcode.com/samba9274}{\texttt{leetcode.com/samba9274}}
+            	\end{tabular}
+            \end{tabular}
+        }
+    \end{tabular}
+}
+
+\newcommand{\cvtag}[1]{
+    \tikz[baseline]\node[anchor=base,fill=gray!75,draw=gray!75,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{\textbf{\color{white}#1}};
+}
+
+\begin{document}
+
+    \cvhead
+
+    \cvsection{\textbf{Education}\\\\\\\\\\\\\\\\\\\\\\\\}{
+
+        \textbf{SSC (10th) | Symbiosis Secondary School}\\
+        Year : 2017\\
+        Percentage : 86.20\%\\\\
+
+        \textbf{HSC (12th) | Science | DES New English School \& Jr. College}\\
+        Year : 2019\\
+        Percentage : 78.62\%\\\\
+
+        \textbf{B.E. | Computer Engineering | Savitribai Phule Pune University}\\
+        AISSMS College of Engineering, Pune\\
+        Year : 2023\\
+        CGPA : 8.72
+
+    }
+
+    \cvsection{\textbf{Skills}\\\\\\\medskip}{
+
+        \cvtag{Java}
+        \cvtag{Python}
+        \cvtag{JavaScript}
+        \cvtag{C/C++}
+        \cvtag{Solidity}
+        \medskip\\
+
+        \cvtag{Spring Boot}
+        \cvtag{Flask}
+        \cvtag{ReactJS}
+        \cvtag{Android SDK}
+        \medskip\\
+
+        \cvtag{MySQL}
+        \cvtag{MongoDB}
+        \cvtag{Docker}
+        \cvtag{Web3}
+
+    }
+
+    \cvsection{\textbf{Experience}\\\\\\\\\\\\}{
+
+        \textbf{ReactJS Developer Intern at ADmyBRAND}\\
+        ADmyBRAND is a marketplace (e-commerce) for advertisements. I worked here as\\NextJS(ReactJS) developer intern for a term of 3 months developing various reusable\\components and pages for the application.\\
+        Website : \href{https://admybrand.com/}{\texttt{admybrand.com}}\\
+        Certificate : \href{https://yash-eksambekar.web.app/docs/ADmyBRAND_CompletionCertificate.pdf}{\texttt{yash-eksambekar.web.app/docs/ADmyBRAND\_CompletionCertificate.pdf}}
+
+    }
+
+    \cvsection{\textbf{Projects}\\\\\\\\\\\\\\\\\\\\\\\\\\\\}{
+
+        \textbf{Blockchain based Electoral Voting System}\\
+        Decentralized and secure voting system using blockchain technology. Project made as\\final year submission for Bachelor's degree.\\
+        Tech-Stack : \textbf{Solidity, Web3, Ethereum, ReactJS}\\
+        Github : \href{https://github.com/Chain-Smokers}{\texttt{github.com/Chain-Smokers}}\\
+        Survey Paper : \href{https://doi.org/10.22214/ijraset.2022.47752}{\texttt{doi.org/10.22214/ijraset.2022.47752}}\\\\
+
+        \textbf{Grant} - Donations application\\
+        Made an application for Google Solution Challenge where users can donate books,\\
+        clothes, toys to various schools, orphanages, NGOs, etc.\\
+        Tech-Stack : \textbf{ReactJS, Flask, MySQL, Firebase}\\
+        Website : \href{https://grant-for-better-future.web.app}{\texttt{grant-for-better-future.web.app}}\\
+        Github : \href{https://github.com/wildchild746/Grant-for-better-future}{\texttt{github.com/wildchild746/Grant-for-better-future}}\\
+        Demo : \href{https://youtu.be/YxOG3DYbfzM}{\texttt{youtu.be/YxOG3DYbfzM}}
+
+    }
+
+    \cvsection{\textbf{Responsibilities and}\\\textbf{Achievements}\\\\\\\\\\\\\\\\\\\\}{
+
+        \textbf{Google Developer Student Club WebDev Member}\\
+        Solution and database design for DSC website. Helped to organize technical events for\\
+        Web Technologies.\\
+        Tech-Stack : \textbf{ReactJS, Spring Boot, MySQL, Firestore, AWS, Firebase}\\
+        Website : \href{https://dsc-aissmscoe.web.app}{\texttt{dsc-aissmscoe.web.app}}\\
+        Certificate : \href{https://yash-eksambekar.web.app/docs/GDSC\_CertificateOfAppreciation\_20-21.pdf}{\texttt{yash-eksambekar.web.app/docs/GDSC\_CertificateOfAppreciation\_20-21.pdf}}\\\\
+
+        \textbf{Google Hash Code Qualification round 2021}\\
+        \textbf{Global Rank : 1379} and \textbf{National Rank : 232}\\
+        Code : \href{https://github.com/samba9274/HashCode-2021-Qualifications}{\texttt{github.com/samba9274/HashCode-2021-Qualifications}}\\
+        Certificate : \href{https://yash-eksambekar.web.app/docs/Google_HashCode_2021.pdf}{\texttt{yash-eksambekar.web.app/docs/Google\_HashCode\_2021.pdf}}
+
+    }
+
+\end{document}
